@@ -45,12 +45,12 @@ A seguir estão os principais resultados do notebook.
 
 ### **Modelo Binário com 2 camadas, e saida binária com ativação simoide**
 
-* **Acurácia:** **≈ 0.951**
+* **Acurácia:** **≈ 0.98**
 * **Precisão / Recall / F1 (weighted avg):**
 
-  * Precisão: **0.95**
-  * Recall: **0.95**
-  * F1-score: **0.95**
+  * Precisão: **0.96**
+  * Recall: **0.99**
+  * F1-score: **0.98**
 * **Resumo:**
   Este foi o **melhor modelo do estudo**, superando todos os demais. A matriz de confusão indica uma divisão equilibrada de acertos entre as duas classes, com baixo número de falsos positivos e falsos negativos.
 
