@@ -1,56 +1,68 @@
-# Heart Disease Prediction using Neural Networks
+# **Heart Disease Prediction Using Neural Networks**
 
-Este projeto tem como objetivo desenvolver um modelo de **rede neural artificial** capaz de prever a presença de doenças cardíacas com base em atributos clínicos de pacientes. A análise foi realizada utilizando um conjunto de dados amplamente conhecido na área de Machine Learning: o **Cleveland Heart Disease Dataset**, disponibilizado pelo *UCI Machine Learning Repository*.
+Este projeto implementa um modelo de **rede neural artificial (RNA)** para prever a presença de doenças cardíacas com base em um conjunto de 13 atributos clínicos. O trabalho segue as etapas de carregamento, limpeza, normalização, treinamento, avaliação e conclusão sobre a importância dos métodos utilizados.
 
----
+O repositório contém:
 
-## 🩺 Problema
-
-A doença cardíaca é uma das principais causas de mortalidade no mundo. Prever precocemente a probabilidade de um paciente apresentar algum grau de comprometimento cardíaco pode auxiliar médicos e instituições de saúde a tomarem decisões mais rápidas e precisas.
-
-O problema consiste em **classificar pacientes** de acordo com indicadores clínicos, como:
-
-- idade  
-- sexo  
-- pressão arterial  
-- níveis de colesterol  
-- frequência cardíaca máxima  
-- resultados de exames específicos  
-
-O objetivo é estimar se um paciente possui ou não doença cardíaca.
+* `README.md` — descrição geral do projeto
+* Jupyter Notebook `.ipynb` — código completo, explicações e visualizações
+* Avaliação final incluindo matriz de confusão, acurácia, precisão e recall
+* Conclusões sobre o desempenho do modelo e sobre a normalização dos dados
 
 ---
 
-## 🧠 Metodologia
+## **Problema**
 
-O notebook realiza o seguinte fluxo de trabalho:
+O objetivo é classificar pacientes entre:
 
-1. **Carregamento e análise do conjunto de dados**
-2. **Pré-processamento**, incluindo:
-   - limpeza dos dados  
-   - tratamento de valores ausentes  
-   - codificação de variáveis categóricas  
-   - normalização  
-3. **Criação de conjuntos de treino e teste** com *stratified split*
-4. **Construção e treinamento de uma rede neural** usando Keras/TensorFlow
-5. Ajustes experimentais para:
-   - evitar overfitting  
-   - melhorar acurácia  
-   - testar abordagem binária de classificação  
-6. **Avaliação dos resultados** e comparação de desempenho entre diferentes modelos
+* **0 — ausência de doença cardíaca**
+* **1 — presença de doença cardíaca**
+
+Utilizando 13 atributos, como idade, colesterol, pressão arterial, tipo de dor no peito, taxa máxima de batimentos, entre outros.
+
+As redes neurais são avaliadas antes e depois de ajustes, comparando modelos categóricos e binários.
 
 ---
 
-## 📊 Resultados Obtidos
+## **Metodologia**
 
-Os modelos treinados apresentaram **desempenho consistente na tarefa de classificação**, demonstrando:
+1. **Importação e limpeza do dataset**
+2. **Normalização dos dados** para melhor desempenho do modelo
+3. **Divisão em treino e teste**
+4. **Treinamento de redes neurais**
+5. **Avaliação usando:**
 
-- boa capacidade de generalização
-- melhora significativa ao utilizar:
-  - estratificação na divisão dos dados  
-  - normalização adequada  
-  - ajustes de arquitetura e hiperparâmetros  
-- resultados ainda melhores ao reformular o problema como **classificação binária** (doença vs. ausência de doença)
+   * Matriz de confusão
+   * Acurácia
+   * Precisão
+   * Recall
 
-Os experimentos mostraram que redes neurais podem ser uma ferramenta eficaz na previsão de doenças cardíacas, quando combinadas com limpeza de dados adequada e técnicas de otimização durante o treinamento.
+---
 
+## **Resultados — Seção 6 (Tarefa Principal TP2)**
+
+A seguir estão os principais resultados do notebook.
+
+### **Modelo Binário com 2 camadas, e saida binária com ativação simoide**
+
+* **Acurácia:** **≈ 0.951**
+* **Precisão / Recall / F1 (weighted avg):**
+
+  * Precisão: **0.95**
+  * Recall: **0.95**
+  * F1-score: **0.95**
+* **Resumo:**
+  Este foi o **melhor modelo do estudo**, superando todos os demais. A matriz de confusão indica uma divisão equilibrada de acertos entre as duas classes, com baixo número de falsos positivos e falsos negativos.
+
+---
+
+## **Conclusão**
+
+O uso de redes neurais artificiais mostrou-se eficaz para a tarefa de predição de doenças cardíacas.
+Entre todos os experimentos realizados:
+
+* O **modelo binário otimizado** alcançou a melhor performance (**95% de acurácia**).
+* A normalização dos dados foi **fundamental** para o aumento significativo no desempenho, reduzindo dispersão entre atributos e melhorando a estabilidade do treinamento.
+* A análise das métricas demonstra que o modelo é confiável tanto em precisão quanto em recall, o que é essencial em aplicações médicas onde falsos negativos podem ser críticos.
+
+Este projeto demonstra como técnicas simples de pré-processamento, aliadas a modelos bem ajustados, podem gerar resultados robustos mesmo em datasets tabulares e de pequeno porte.
