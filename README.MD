@@ -1,5 +1,14 @@
 # **Heart Disease Prediction Using Neural Networks**
 
+Equipe:
+
+Thales: thales@icomp.ufam.edu.br
+Guilherme Moura: guilherme.moura@icomp.ufam.edu.br
+Victor Dantas: victor.dantas@icomp.ufam.edu.br
+Vinicius Santana: vinicius.santana@icomp.ufam.edu.br
+Nestor Souza: nestor.souza@icomp.ufam.edu.br
+Gabriela Borges: gabriela.borges@icomp.ufam.edu.br
+
 Este projeto implementa um modelo de **rede neural artificial (RNA)** para prever a presença de doenças cardíacas com base em um conjunto de 13 atributos clínicos. O trabalho segue as etapas de carregamento, limpeza, normalização, treinamento, avaliação e conclusão sobre a importância dos métodos utilizados.
 
 O repositório contém:
