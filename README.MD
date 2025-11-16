@@ -1,15 +1,16 @@
 # **Heart Disease Prediction Using Neural Networks**
 
-Equipe:
-
-Thales: thales@icomp.ufam.edu.br
-Guilherme Moura: guilherme.moura@icomp.ufam.edu.br
-Victor Dantas: victor.dantas@icomp.ufam.edu.br
-Vinicius Santana: vinicius.santana@icomp.ufam.edu.br
-Nestor Souza: nestor.souza@icomp.ufam.edu.br
-Gabriela Borges: gabriela.borges@icomp.ufam.edu.br
 
 Este projeto implementa um modelo de **rede neural artificial (RNA)** para prever a presença de doenças cardíacas com base em um conjunto de 13 atributos clínicos. O trabalho segue as etapas de carregamento, limpeza, normalização, treinamento, avaliação e conclusão sobre a importância dos métodos utilizados.
+
+Equipe:
+
+Thales: thales@icomp.ufam.edu.br ,
+Guilherme Moura: guilherme.moura@icomp.ufam.edu.br ,
+Victor Dantas: victor.dantas@icomp.ufam.edu.br ,
+Vinicius Santana: vinicius.santana@icomp.ufam.edu.br ,
+Nestor Souza: nestor.souza@icomp.ufam.edu.br ,
+Gabriela Borges: gabriela.borges@icomp.ufam.edu.br .
 
 O repositório contém:
 
@@ -65,8 +66,6 @@ A seguir estão os principais resultados do notebook.
 
 ---
 
-## **Conclusão**
-
 O uso de redes neurais artificiais mostrou-se eficaz para a tarefa de predição de doenças cardíacas.
 Entre todos os experimentos realizados:
 
@@ -75,3 +74,21 @@ Entre todos os experimentos realizados:
 * A análise das métricas demonstra que o modelo é confiável tanto em precisão quanto em recall, o que é essencial em aplicações médicas onde falsos negativos podem ser críticos.
 
 Este projeto demonstra como técnicas simples de pré-processamento, aliadas a modelos bem ajustados, podem gerar resultados robustos mesmo em datasets tabulares e de pequeno porte.
+
+---
+
+## **Conclusão**
+
+O uso de redes neurais artificiais (RNAs) mostrou-se eficaz para a tarefa de predição de doenças cardíacas. Entre os experimentos realizados, o modelo binário otimizado (configurado com 2 camadas ocultas e uma saída sigmoide) foi o que alcançou a melhor performance. Este modelo atingiu uma acurácia de aproximadamente 95% , com métricas de precisão (0.94) e recall (0.97)  igualmente altas. A análise dessas métricas demonstra que o modelo é confiável, o que é essencial em aplicações médicas onde falsos negativos podem ser críticos.
+
+A etapa de normalização dos dados revelou-se fundamental para o sucesso do projeto. Como explicado no Jupyter Notebook, alimentar a rede neural com atributos em escalas muito diferentes (como idade e colesterol) torna o aprendizado "problemático".
+
+A normalização foi crucial pelos seguintes motivos:
+
+
+Evita Problemas de Aprendizado: O modelo aprende com mais dificuldade quando os dados de entrada têm escalas muito diferentes (ex: idade variando de 29 a 77, enquanto oldpeak varia de 0 a 6.2).
+
+
+Cria Estabilidade: O método usado (normalização por característica) padronizou todos os 13 atributos, fazendo com que ficassem centrados em 0 e com desvio padrão de 1.
+
+Melhora o Desempenho: Isso levou a um "aumento significativo no desempenho" e "melhorou a estabilidade do treinamento", permitindo que o modelo alcançasse resultados robustos.
